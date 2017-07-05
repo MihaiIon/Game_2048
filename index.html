@@ -4,23 +4,34 @@
 	<title>Game :: 2048</title>
 	<link rel="stylesheet" type="text/css" href="css/styles.css"/>
 
-	<!-- Scripts -->
+	<!-- Libraries -->
+	<script type="text/javascript" src="js/lib/jquery.js"></script>
+
+	<!-- Core -->
 	<script type="text/javascript" src="js/src/core.js"></script>
-	<script type="text/javascript" src="js/src/model/board.js"></script>
-	<script type="text/javascript" src="js/src/model/tile.js"></script>
 	<script type="text/javascript" src="js/src/core/init.js"></script>
 	<script type="text/javascript" src="js/src/core/initboard.js"></script>
 	<script type="text/javascript" src="js/src/core/addkeylisteners.js"></script>
 	<script type="text/javascript" src="js/src/core/start.js"></script>
+	<script type="text/javascript" src="js/src/core/restart.js"></script>
+
+	<!-- Model :: Board -->
+	<script type="text/javascript" src="js/src/model/board.js"></script>
+	<script type="text/javascript" src="js/src/model/board/reset.js"></script>
+	<script type="text/javascript" src="js/src/model/board/draw.js"></script>
+	<script type="text/javascript" src="js/src/model/board/spawnTile.js"></script>
+
+	<!-- Model :: Tile -->
+	<script type="text/javascript" src="js/src/model/tile.js"></script>
+
+	<!-- On -->
 	<script type="text/javascript">
-		
-		var a = Game({
+		var a;
+		$( document ).ready( _ => {
 
-			size: 5,
-			other: "none"
+			a = Game({ size: 5, other: "none" }).start();
 
-		}).start();
-
+		});
 	</script>
 </head>
 <body>

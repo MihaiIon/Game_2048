@@ -1,0 +1,6 @@
+/**
+ *
+ */
+Board.prototype.spawnTile = function() {
+	
+};

@@ -45,7 +45,7 @@
 		 */
 		STATE: {
 			IDLE: "Idle",
-			IN_GAME: "IN GAME",
+			IN_GAME: "In Game",
 			PLAYER_WON: "Player Won",
 			PLAYER_LOST: "Player Lost"
 		}

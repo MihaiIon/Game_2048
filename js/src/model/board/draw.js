@@ -1,0 +1,6 @@
+/**
+ *
+ */
+Board.prototype.draw = function() {
+	
+};

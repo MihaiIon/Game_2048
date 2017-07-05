@@ -20,14 +20,12 @@ Game.fn.init = function ( options ){
 		// Correct size if 'undefined' or 'null'.
 		this.initBoard( !size ? 4 : size );
 
-		// 
+		// Controls the flow of the game.
 		this.state = this.STATE.IDLE;
 
-		//
 		this.currentScore = 0;
 		this.maxScore = 0;
 
-		// 
 		this.addKeyListeners();
 	};
 
