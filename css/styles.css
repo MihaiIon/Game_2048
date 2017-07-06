@@ -8,8 +8,12 @@ body {
 	background-color: #171919;
 }
 
+div, h1, p, button, input, span {
+	font-family: 'Poppins', sans-serif;
+}
+
 .page {
-	padding: 4em 0;
+	padding-top: 4em;
 }
 
 .space-between {
@@ -21,7 +25,7 @@ body {
  * Header
  */
 .game--title {
-	font-size: 5em;
+	font-size: 4.5em;
 	color: #0fdfa1;
 	margin: 0;
 }
@@ -46,28 +50,29 @@ body {
 
 .game--stats-title,
 .game--stats-value {
+	font-size: 0.8em;
 	text-align: center;
 }
 
 .game--stats-value {
-	font-size: 1.4em;
+	font-size: 1em;
 	font-weight: bold;
 	color: white;
 	margin: 0.2em 0;
 }
 
 .game--controllers {
-	padding: 2.4em 0 2em 0em; 
+	padding: 1em 0 2em 0em; 
 }
 
 .game--controllers label {
-	font-size: 1.3em;
+	font-size: 1.2em;
 	color: #d4d4d4;
 }
 
 #game--size-input,
 #game--start-btn {
-	font-size: 1.2em;
+	font-size: 1.05em;
 	padding: 0.5em 1.2em;
 	border-radius: 2%;
 	outline: none;
