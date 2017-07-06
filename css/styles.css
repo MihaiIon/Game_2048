@@ -79,6 +79,7 @@ div, h1, p, button, input, span {
 }
 
 #game--size-input {
+	min-width: 4.4em;
 	color: #33a382;
 	padding-right: 0;
 	margin-left: 1em;
@@ -98,8 +99,10 @@ div, h1, p, button, input, span {
 	background-color: #da6189;
 }
 
-/** 
+/**---------------------------------------------------------------------------------------
+ * 
  * Board - General
+ *
  */
 #game--board {
 	width: 500px;
@@ -140,23 +143,40 @@ div, h1, p, button, input, span {
 
 .game--board-size-5 .board-cell,
 .game--board-size-5 .tile
-{ width: 100px; height: 100px; }
+{ width: 89px; height: 89px; }
 
 .game--board-size-6 .board-cell,
 .game--board-size-6 .tile
-{ width: 90px; height: 90px; }
+{ width: 75px; height: 75px; }
 
 .game--board-size-7 .board-cell,
 .game--board-size-7 .tile
-{ width: 80px; height: 80px; }
+{ width: 66px; height: 66px; }
 
 .game--board-size-8 .board-cell,
 .game--board-size-8 .tile
-{ width: 70px; height: 70px; }
+{ width: 57px; height: 57px; }
 
 
-/**
+.game--board-size-5 .board-row:not(:last-child)  { margin-bottom: 0.8em; }
+.game--board-size-5 .board-cell:not(:last-child) { margin-right: 0.8em; }
+
+.game--board-size-6 .board-row:not(:last-child)  { margin-bottom: 0.6em; }
+.game--board-size-6 .board-cell:not(:last-child) { margin-right: 0.6em; }
+
+.game--board-size-7 .board-row:not(:last-child),
+.game--board-size-8 .board-row:not(:last-child)  
+{ margin-bottom: 0.4em; }
+
+.game--board-size-7 .board-cell:not(:last-child),
+.game--board-size-8 .board-cell:not(:last-child) 
+{ margin-right: 0.4em;  }
+
+
+/**---------------------------------------------------------------------------------------
+ * 
  * Board - Tiles
+ *
  */
 #game--tiles {
 	position: absolute;
@@ -173,6 +193,10 @@ div, h1, p, button, input, span {
 	font-size: 3.2em;
 	font-weight: bold;
 }
+
+.game--board-size-6 .tile-inner {  font-size: 2.5em; }
+.game--board-size-7 .tile-inner {  font-size: 1.8em; }
+.game--board-size-8 .tile-inner {  font-size: 1.5em; }
 
 .tile-level-1 { background-color: #53c098; }
 .tile-level-1 .tile-inner { color: #1e4235; }
