@@ -18,19 +18,21 @@
 
 	<!-- Model :: Board -->
 	<script type="text/javascript" src="js/src/model/board.js"></script>
+	<script type="text/javascript" src="js/src/model/board/setupDOM.js"></script>
 	<script type="text/javascript" src="js/src/model/board/reset.js"></script>
 	<script type="text/javascript" src="js/src/model/board/draw.js"></script>
 	<script type="text/javascript" src="js/src/model/board/spawnTile.js"></script>
 
 	<!-- Model :: Tile -->
 	<script type="text/javascript" src="js/src/model/tile.js"></script>
+	<script type="text/javascript" src="js/src/model/tile/createTileElement.js"></script>
 
 	<!-- On -->
 	<script type="text/javascript">
 		var a;
 		$( document ).ready( _ => {
 
-			a = Game({ size: 5, other: "none" }).start();
+			a = Game({ size: 4, other: "none" }).start();
 
 		});
 	</script>
@@ -60,39 +62,8 @@
 			</div>
 		</header>
 		<div id="game--board" class="game--board-size-4">
-			<div class="board-grid">
-				<div class="board-row">
-					<div class="board-cell"></div>
-					<div class="board-cell"></div>
-					<div class="board-cell"></div>
-					<div class="board-cell"></div>
-				</div>
-				<div class="board-row">
-					<div class="board-cell"></div>
-					<div class="board-cell"></div>
-					<div class="board-cell"></div>
-					<div class="board-cell"></div>
-				</div>
-				<div class="board-row">
-					<div class="board-cell"></div>
-					<div class="board-cell"></div>
-					<div class="board-cell"></div>
-					<div class="board-cell"></div>
-				</div>
-				<div class="board-row">
-					<div class="board-cell"></div>
-					<div class="board-cell"></div>
-					<div class="board-cell"></div>
-					<div class="board-cell"></div>
-				</div>
-			</div>
-			<div id="game--tiles" class="board-tiles">
-				<div class="tile tile-level-1">
-					<div class="tile-inner">
-						2
-					</div>
-				</div>
-			</div>
+			<div class="board-grid"></div>
+			<div id="game--tiles" class="board-tiles"></div>
 		</div>
 		<footer>
 			<p><span>p1012378</span> and <span>20050762</span></p>

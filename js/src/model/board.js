@@ -13,11 +13,11 @@ var Board = function( size ){
 		this.grid[i] = new Array( size );
 	}
 
+	// Append Grid to DOM.
+	this.setupDOM();
+
 	// Clears and sets up the grid.
 	this.reset();
-
-	// Apply changes to DOM.
-	this.draw();
 }
 
 /*
@@ -25,3 +25,4 @@ var Board = function( size ){
  */
 Board.prototype.BOARD_SELECTOR = "#game--board";
 Board.prototype.TILES_SELECTOR = "#game--tiles";
+Board.prototype.GRID_SELECTOR = ".board-grid";

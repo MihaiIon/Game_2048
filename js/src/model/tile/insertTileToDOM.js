@@ -1,0 +1,6 @@
+/**
+ * 
+ */
+Tile.prototype.insertTileToDOM = function() {
+		
+};

@@ -1,5 +1,5 @@
 /**
- *
+ * Clears everything and spawns starting tiles on the grid.
  */
 Board.prototype.reset = function() {
 
@@ -11,7 +11,13 @@ Board.prototype.reset = function() {
 		}
 	}
 
+	// Clears the tiles from the DOM.
+	this.$board.find(this.TILES_SELECTOR).empty(); 
+
 	// Fills the grid with 2 or 3 Tiles to begin a new game.
-	for (var i = 0; i < (Math.floor(Math.random()*1) + 2); i++)
+	for (var i = 0; i < (Math.floor(Math.random()*2) + 2); i++)
 		this.spawnTile();
+
+	// Apply changes to DOM.
+	this.draw();
 };

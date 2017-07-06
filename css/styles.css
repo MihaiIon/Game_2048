@@ -1,5 +1,7 @@
-/**
+/**---------------------------------------------------------------------------------------
+ * 
  * General
+ *
  */
 body {
 	display: flex;
@@ -21,8 +23,10 @@ div, h1, p, button, input, span {
 	justify-content: space-between;
 }
 
-/**
+/**---------------------------------------------------------------------------------------
+ * 
  * Header
+ *
  */
 .game--title {
 	font-size: 4.5em;
@@ -99,6 +103,8 @@ div, h1, p, button, input, span {
 	background-color: #da6189;
 }
 
+
+
 /**---------------------------------------------------------------------------------------
  * 
  * Board - General
@@ -173,6 +179,7 @@ div, h1, p, button, input, span {
 { margin-right: 0.4em;  }
 
 
+
 /**---------------------------------------------------------------------------------------
  * 
  * Board - Tiles
@@ -187,6 +194,9 @@ div, h1, p, button, input, span {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	position: absolute;
+	top: 0px;
+	left: 0px;
 }
 
 .tile-inner {
@@ -198,8 +208,17 @@ div, h1, p, button, input, span {
 .game--board-size-7 .tile-inner {  font-size: 1.8em; }
 .game--board-size-8 .tile-inner {  font-size: 1.5em; }
 
-.tile-level-1 { background-color: #53c098; }
-.tile-level-1 .tile-inner { color: #1e4235; }
+/**---------------------------------------------------------------------------------------
+ * 
+ * Board - Tiles - Colors
+ *
+ */
+
+.tile-level-0 { background-color: #53c098; }
+.tile-level-0 .tile-inner { color: #1e4235; }
+
+.tile-level-1 { background-color: #4bbd63; }
+.tile-level-1 .tile-inner { color: #093815; }
 
 .tile-level-2 { background-color: #74c3a6; }
 .tile-level-2 .tile-inner { color: #32463f; }
@@ -223,8 +242,37 @@ div, h1, p, button, input, span {
 .tile-level-8 .tile-inner { color: #32463f; }
 
 
-/**
+
+/**---------------------------------------------------------------------------------------
+ * 
+ * Board - Tiles - Positions.
+ *
+ */
+
+/* Size 4*/
+.game--board-size-4 .tile-position-0-1 { left: 129px; }
+.game--board-size-4 .tile-position-0-2 { left: 258px; }
+.game--board-size-4 .tile-position-0-3 { left: 387px; }
+
+.game--board-size-4 .tile-position-1-0 { top: 129px; }
+.game--board-size-4 .tile-position-1-1 { top: 129px; left: 129px; }
+.game--board-size-4 .tile-position-1-2 { top: 129px; left: 258px; }
+.game--board-size-4 .tile-position-1-3 { top: 129px; left: 387px; }
+
+.game--board-size-4 .tile-position-2-0 { top: 258px; }
+.game--board-size-4 .tile-position-2-1 { top: 258px; left: 129px; }
+.game--board-size-4 .tile-position-2-2 { top: 258px; left: 258px; }
+.game--board-size-4 .tile-position-2-3 { top: 258px; left: 387px; }
+
+.game--board-size-4 .tile-position-3-0 { top: 387px; }
+.game--board-size-4 .tile-position-3-1 { top: 387px; left: 129px; }
+.game--board-size-4 .tile-position-3-2 { top: 387px; left: 258px; }
+.game--board-size-4 .tile-position-3-3 { top: 387px; left: 387px; }
+
+/**---------------------------------------------------------------------------------------
+ * 
  * Footer
+ *
  */
 footer p {
 	text-align: center;
@@ -235,3 +283,11 @@ footer span {
 	font-weight: bold;
 	color: #659284;
 }
+
+
+
+/**---------------------------------------------------------------------------------------
+ * 
+ * Animation - Tiles
+ *
+ */
