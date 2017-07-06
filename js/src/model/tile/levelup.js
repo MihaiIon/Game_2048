@@ -7,14 +7,14 @@ Tile.prototype.levelUp = function() {
 	this.value = this.getValueForLevel( ++this.level );
 
 	// Update Tile in DOM.
-	this.updateTile();
+	this.updateTileLevel();
 };
 
 
 /**
  *
  */
-Tile.prototype.updateTile = function() {
+Tile.prototype.updateTileLevel = function() {
 	
 	// Update level.
 	this.$tile.removeClass( 'tile-level-' + (this.level-1) );
@@ -27,8 +27,8 @@ Tile.prototype.updateTile = function() {
 	var _this = this;
 	this.$tile.addClass( this.POPPING_CLASS );
 	setTimeout(function(){
-		_this.$tile.addClass( this.POPPING_CLASS );
-	}, 200)
+		_this.$tile.removeClass( _this.POPPING_CLASS );
+	}, 200);
 };
 
 Tile.prototype.POPPING_CLASS = "tile-level-up";
