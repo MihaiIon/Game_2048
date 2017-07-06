@@ -170,7 +170,7 @@ body {
 }
 
 .tile-level-1 { background-color: #53c098; }
-.tile-level-1 .tile-inner { color: #2a5a49; }
+.tile-level-1 .tile-inner { color: #1e4235; }
 
 .tile-level-2 { background-color: #74c3a6; }
 .tile-level-2 .tile-inner { color: #32463f; }
@@ -192,3 +192,17 @@ body {
 
 .tile-level-8 { background-color: #74c3a6; }
 .tile-level-8 .tile-inner { color: #32463f; }
+
+
+/**
+ * Footer
+ */
+footer p {
+	text-align: center;
+	color: #496b60;
+}
+
+footer span {
+	font-weight: bold;
+	color: #659284;
+}
