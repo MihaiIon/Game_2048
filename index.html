@@ -35,6 +35,67 @@
 	</script>
 </head>
 <body>
-
+	<div class="page">
+		<header>
+			<div class="space-between">
+				<h1 class="game--title">2048</h1>
+				<div class="game--stats">
+					<div class="game--stats-box">
+						<div class="game--stats-title">Score</div>
+						<p id="game--score" class="game--stats-value">0</p>
+					</div>
+					<div class="game--stats-box">
+						<div class="game--stats-title">Best</div>
+						<p id="game--best-score" class="game--stats-value">0</p>
+					</div>
+				</div>
+			</div>
+			<div class="game--controllers space-between">
+				<label class="game--size-label">
+					Select Size : 
+					<input id="game--size-input" type="number" min="4" max="8" />
+				</label>
+				<button id="game--start-btn">New Game</button>
+			</div>
+		</header>
+		<div id="game--board" class="game--board-size-4">
+			<div class="board-grid">
+				<div class="board-row">
+					<div class="board-cell"></div>
+					<div class="board-cell"></div>
+					<div class="board-cell"></div>
+					<div class="board-cell"></div>
+				</div>
+				<div class="board-row">
+					<div class="board-cell"></div>
+					<div class="board-cell"></div>
+					<div class="board-cell"></div>
+					<div class="board-cell"></div>
+				</div>
+				<div class="board-row">
+					<div class="board-cell"></div>
+					<div class="board-cell"></div>
+					<div class="board-cell"></div>
+					<div class="board-cell"></div>
+				</div>
+				<div class="board-row">
+					<div class="board-cell"></div>
+					<div class="board-cell"></div>
+					<div class="board-cell"></div>
+					<div class="board-cell"></div>
+				</div>
+			</div>
+			<div id="game--tiles" class="board-tiles">
+				<div class="tile tile-level-1">
+					<div class="tile-inner">
+						2
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer>
+			
+		</footer>
+	</div>
 </body>
 </html>

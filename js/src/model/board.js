@@ -1,10 +1,10 @@
 /**
  *
  */
-Board = function( size ){
+var Board = function( size ){
 
 	// Jquery element corresonding to the board.
-	this.$board = $(this.JQUERY_SELECTOR);
+	this.$board = $( this.BOARD_SELECTOR );
 	
 	// Build the grid.
 	this.size = size;
@@ -23,5 +23,5 @@ Board = function( size ){
 /*
  * Constants
  */
-Board.prototype.TILE_SIZE = 20;
-Board.prototype.JQUERY_SELECTOR = '#board-game';
+Board.prototype.BOARD_SELECTOR = "#game--board";
+Board.prototype.TILES_SELECTOR = "#game--tiles";

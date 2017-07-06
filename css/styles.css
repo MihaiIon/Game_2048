@@ -1,0 +1,194 @@
+/**
+ * General
+ */
+body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #171919;
+}
+
+.page {
+	padding: 4em 0;
+}
+
+.space-between {
+	display: flex;
+	justify-content: space-between;
+}
+
+/**
+ * Header
+ */
+.game--title {
+	font-size: 5em;
+	color: #0fdfa1;
+	margin: 0;
+}
+
+.game--stats {
+	display: flex;
+	justify-content: space-between;
+}
+
+.game--stats-box {
+	color: #dedede;
+	min-width: 3em;
+	max-height: 3.4em;
+	padding: 0.5em 1.5em 0em 1.5em;
+	border-radius: 5%;
+    background-color: #394843;
+}
+
+.game--stats-box:first-child {
+	margin-right: 1em;
+}
+
+.game--stats-title,
+.game--stats-value {
+	text-align: center;
+}
+
+.game--stats-value {
+	font-size: 1.4em;
+	font-weight: bold;
+	color: white;
+	margin: 0.2em 0;
+}
+
+.game--controllers {
+	padding: 2.4em 0 2em 0em; 
+}
+
+.game--controllers label {
+	font-size: 1.3em;
+	color: #d4d4d4;
+}
+
+#game--size-input,
+#game--start-btn {
+	font-size: 1.2em;
+	padding: 0.5em 1.2em;
+	border-radius: 2%;
+	outline: none;
+}
+
+#game--size-input {
+	color: #33a382;
+	padding-right: 0;
+	margin-left: 1em;
+	background-color: #212424;
+	border: solid #212424 1px;
+}
+
+#game--start-btn {
+	color: white;
+	background-color: #b53e66;
+	border: solid #b53e66 1px;
+	transition: background-color 0.2s;
+}
+
+#game--start-btn:hover {
+	cursor: pointer;
+	background-color: #da6189;
+}
+
+/** 
+ * Board - General
+ */
+#game--board {
+	width: 500px;
+	height: 500px;
+	padding: 1.2em;
+	border-radius: 2%;
+	background-color: #454e4a;
+}
+
+.board-grid, .board-tiles {
+	position: absolute;
+	z-index: 1;
+}
+
+.board-row {
+	display: flex;
+}
+
+.board-cell {
+	background-color: #596862;
+}
+
+.board-cell, .tile {
+	border-radius: 5%;
+}
+
+.board-row:not(:last-child) {
+	margin-bottom: 1em;
+}
+
+.board-cell:not(:last-child) {
+	margin-right: 1em;
+}
+
+.game--board-size-4 .board-cell,
+.game--board-size-4 .tile
+{ width: 113px; height: 113px; }
+
+.game--board-size-5 .board-cell,
+.game--board-size-5 .tile
+{ width: 100px; height: 100px; }
+
+.game--board-size-6 .board-cell,
+.game--board-size-6 .tile
+{ width: 90px; height: 90px; }
+
+.game--board-size-7 .board-cell,
+.game--board-size-7 .tile
+{ width: 80px; height: 80px; }
+
+.game--board-size-8 .board-cell,
+.game--board-size-8 .tile
+{ width: 70px; height: 70px; }
+
+
+/**
+ * Board - Tiles
+ */
+#game--tiles {
+	position: absolute;
+	z-index: 10;
+}
+
+.tile {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.tile-inner {
+	font-size: 3.2em;
+	font-weight: bold;
+}
+
+.tile-level-1 { background-color: #53c098; }
+.tile-level-1 .tile-inner { color: #2a5a49; }
+
+.tile-level-2 { background-color: #74c3a6; }
+.tile-level-2 .tile-inner { color: #32463f; }
+
+.tile-level-3 { background-color: #74c3a6; }
+.tile-level-3 .tile-inner { color: #32463f; }
+
+.tile-level-4 { background-color: #74c3a6; }
+.tile-level-4 .tile-inner { color: #32463f; }
+
+.tile-level-5 { background-color: #74c3a6; }
+.tile-level-5 .tile-inner { color: #32463f; }
+
+.tile-level-6 { background-color: #74c3a6; }
+.tile-level-6 .tile-inner { color: #32463f; }
+
+.tile-level-7 { background-color: #74c3a6; }
+.tile-level-7 .tile-inner { color: #32463f; }
+
+.tile-level-8 { background-color: #74c3a6; }
+.tile-level-8 .tile-inner { color: #32463f; }

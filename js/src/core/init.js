@@ -12,9 +12,9 @@ Game.fn.init = function ( options ){
 
 		if ( size ) 
 		{
-			if ( !regexp.test(size) || size < 2 || size > 12 )
+			if ( !regexp.test(size) || size < 4 || size > 8 )
 				throw new Error( "The 'size' provided is incorrect. "
-					+ "The size of the board must be a number between 2 and 12." );
+					+ "The size of the board must be a number between 4 and 8." );
 		}
 		
 		// Correct size if 'undefined' or 'null'.
@@ -24,7 +24,7 @@ Game.fn.init = function ( options ){
 		this.state = this.STATE.IDLE;
 
 		this.currentScore = 0;
-		this.maxScore = 0;
+		this.bestScore = 0;
 
 		this.addKeyListeners();
 	};
