@@ -1,5 +1,5 @@
 /**
- * 
+ * Creates the DOM Element corresponding to the actual Tile.
  */
 Tile.prototype.createTileElement = function() {
 	return $('<div>', { 

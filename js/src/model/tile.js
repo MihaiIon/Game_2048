@@ -1,5 +1,6 @@
 /**
- *
+ * TIle
+ * -- Constructor.
  */
 var Tile = function( x, y, lvl, board ){
 

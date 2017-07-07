@@ -1,5 +1,5 @@
 /**
- * Clears everything and spawns starting tiles on the grid.
+ * Clears every Tile and spawns starting tiles on the grid.
  */
 Board.prototype.reset = function() {
 
