@@ -1,5 +1,5 @@
 /**
- * TIle
+ * Tile
  * -- Constructor.
  */
 var Tile = function( x, y, lvl, board ){
@@ -16,8 +16,17 @@ var Tile = function( x, y, lvl, board ){
 	board.$board.find(board.TILES_SELECTOR).append(this.createTileElement());
 
 	// Save Tile
-	this.$tile = board.$board.find('.tile-position-'+this.x+'-'+this.y);
+	this.$tile = board.$board.find(this.buildPositionSelector());
 }
+
+
+/**
+ *
+ */
+Tile.prototype.buildPositionSelector = function() {
+	return '.tile-position-'+this.x+'-'+this.y;
+};
+
 
 /**
  *
