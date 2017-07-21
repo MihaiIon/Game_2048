@@ -13,6 +13,9 @@ var Board = function( size ){
 		this.grid[i] = new Array( size );
 	}
 
+	// Track number of tiles in Game.
+	this.tilesCount = 0;
+
 	// Append Grid to DOM.
 	this.setupDOM();
 

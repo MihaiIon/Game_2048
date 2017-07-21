@@ -9,6 +9,8 @@ Board.prototype.spawnTile = function() {
 			Math.floor(Math.random()*2),
 			this 
 		);
+
+	this.tileCount++;
 };
 
 /**

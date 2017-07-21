@@ -1,6 +1,0 @@
-/**
- *
- */
-Board.prototype.draw = function() {
-	
-};

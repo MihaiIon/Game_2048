@@ -16,17 +16,17 @@ Game.fn.init = function ( options ){
 				throw new Error( "The 'size' provided is incorrect. "
 					+ "The size of the board must be a number between 4 and 8." );
 		}
-		
-		// Correct size if 'undefined' or 'null'.
-		this.initBoard( !size ? 4 : size );
 
 		// Controls the flow of the game.
 		this.state = this.STATE.IDLE;
-
 		this.currentScore = 0;
 		this.bestScore = 0;
 
-		this.addKeyListeners();
+		// Correct size if 'undefined' or 'null'.
+		this.initInterface();
+
+		// Start game.
+		this.start( !size ? 4 : size )
 	};
 
 	// Give the init function the Game prototype for later instantiation
