@@ -1,6 +1,0 @@
-/**
- * 
- */
-Tile.prototype.insertTileToDOM = function() {
-		
-};

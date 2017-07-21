@@ -1,9 +1,11 @@
+/**
+ *
+ */
+Tile.prototype.moveTileInDOM = function( x, y ) {
+	
+	this.$tile.removeClass( this.buildPositionSelector( this.x, this.y ) );
+	this.$tile.addClass( this.buildPositionSelector( x, y ) );
 
-Tile.prototype.moveTileInDOM = function(newX, newY) {
-// Update position
-	this.$tile.removeClass( 'tile-position-'+this.x+'-'+this.y );
-	this.$tile.addClass( 'tile-position-'+newX+'-'+newY);
-
-	this.x = newX;
-	this.y = newY;
+	this.x = x;
+	this.y = y;
 };

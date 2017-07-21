@@ -16,16 +16,8 @@ var Tile = function( x, y, lvl, board ){
 	board.$board.find(board.TILES_SELECTOR).append(this.createTileElement());
 
 	// Save Tile
-	this.$tile = board.$board.find(this.buildPositionSelector());
+	this.$tile = board.$board.find( "." + this.buildPositionSelector( this.x, this.y ) );
 }
-
-
-/**
- *
- */
-Tile.prototype.buildPositionSelector = function() {
-	return '.tile-position-'+this.x+'-'+this.y;
-};
 
 
 /**
