@@ -23,11 +23,5 @@ Tile.prototype.updateTileLevel = function() {
 	this.$tile.find( '.tile-inner' ).text( this.value );
 
 	// Popping Animation.
-	var _this = this;
-	this.$tile.addClass( this.POPPING_CLASS );
-	setTimeout(function(){
-		_this.$tile.removeClass( _this.POPPING_CLASS );
-	}, 200);
+	this.pop();
 };
-
-Tile.prototype.POPPING_CLASS = "tile-level-up";

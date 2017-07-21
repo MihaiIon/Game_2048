@@ -2,28 +2,38 @@
  * Tile
  * -- Constructor.
  */
-var Tile = function( x, y, lvl, board ){
+var Tile = function( id, x, y, lvl, board ){
 
+	this.id = id;
 	this.x = x;
 	this.y = y;
+	this.board = board;
 
 	// Get level data.
 	this.level = lvl;
 	this.value = this.getValueForLevel(lvl);
 
-	// Create Tile in DOM.
-	this.board = board;
-	board.$board.find(board.TILES_SELECTOR).append(this.createTileElement());
+	// Delay append.
+	var _this = this;
+	setTimeout(function(){
 
-	// Save Tile
-	this.$tile = board.$board.find( "." + this.buildPositionSelector( this.x, this.y ) );
+		// Create Tile in DOM.
+		_this.board.$board.find(_this.board.TILES_SELECTOR).append( _this.createTileElement() );
+
+		// Save Tile
+		_this.$tile = board.$board.find( "." + _this.buildPositionSelector( _this.x, _this.y ) );
+
+		// Popping Animation.
+		_this.pop();
+
+	}, 120);
 }
 
 
 /**
  *
  */
-Tile.prototype.getValueForLevel = function(level) {
+Tile.prototype.getValueForLevel = function( level ) {
 	switch(level)
 	{
 		case 10: return 2048;

@@ -5,6 +5,7 @@ Board.prototype.spawnTile = function() {
 	var s = this.findFreeSlot();
 	this.grid[s.i][s.j] = 
 		new Tile(
+			0,
 			s.i, s.j, 
 			Math.floor(Math.random()*2),
 			this 
