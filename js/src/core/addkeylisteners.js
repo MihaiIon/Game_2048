@@ -18,21 +18,6 @@ Game.fn.addKeyListeners = function(){
 	        case 82: _this.reset();	// r -> for reset
 	    }
 
-	    /*
-	     * Launch AI to check if the player lost.
-	     */
-	    switch(e.which) {
-	        case 37: 
-	        case 38: 
-	        case 39: 
-	        case 40: 
-	        	_this.unmergeTiles();
-	        	if(_this.board.isFull()){
-	        		// TODO.
-	        		console.log("BOARD IS FULL, MISSING AI.");
-	        	} break;
-	    }
-
 	    // prevent the default action (scroll / move caret)
 	    e.preventDefault(); 
 	});
@@ -44,7 +29,34 @@ Game.fn.addKeyListeners = function(){
 
 
 /**
- *
+ * Done after any kind of Tile slide.
+ */
+Game.fn.afterSlide = function( tilesMoved ) {
+
+	// Spawn new Tile. 
+	if ( tilesMoved ) this.board.spawnTile();
+
+	// Clear merging status.
+	var grid = this.board.grid;
+	for (var i = 0; i < this.board.size; i++)
+		for (var j = 0; j < this.board.size; j++)
+			if ( grid[i][j] ) 
+				grid[i][j].merged = false;
+
+	// If board is full, launch AI.
+	if(this.board.isFull()){
+    		// TODO.
+    		console.log("BOARD IS FULL, MISSING AI.");
+    }
+}
+
+
+
+//----------------------------------------------------------------------
+
+
+/**
+ * Slide all Tiles to the Left.
  */
 Game.fn.slideLeft = function(){
 
@@ -82,12 +94,12 @@ Game.fn.slideLeft = function(){
 				}
 			}
 		}
-	} if ( tilesMoved ) board.spawnTile();
+	} this.afterSlide( tilesMoved );
 }
 
 
 /**
- *
+ * Slide all Tiles to the Right.
  */
 Game.fn.slideRight = function(){
 
@@ -117,12 +129,12 @@ Game.fn.slideRight = function(){
 				}
 			}
 		}
-	} if ( tilesMoved ) board.spawnTile();
+	} this.afterSlide( tilesMoved );
 }
 
 
 /**
- *
+ * Slide all Tiles Upward.
  */
 Game.fn.slideUp = function(){
 
@@ -152,12 +164,12 @@ Game.fn.slideUp = function(){
 				}
 			}
 		}
-	} if ( tilesMoved ) board.spawnTile();
+	} this.afterSlide( tilesMoved );
 }
 
 
 /**
- *
+ * Slide all Tiles Downward.
  */
 Game.fn.slideDown = function(){
 
@@ -169,9 +181,6 @@ Game.fn.slideDown = function(){
 		for (var i = 0; i < board.size; i++) {
 			if(currTile = board.grid[i][j])
 			{
-				/*
-				 * 	Find closest Tile farthest freeSlot.
-				 */
 				var index = currTile.y,
 					tile = null,
 					freeSlotIndex = index,
@@ -181,10 +190,6 @@ Game.fn.slideDown = function(){
 					else 							freeSlotIndex = index;
 				}
 
-				/*
-				 * If a tile is found, check it's level and try to merge to it.
-				 * Else, move <currTile> to farthest available slot (if it can move).
-				 */
 				if( tile && !tile.merged && tile.level == currTile.level ){
 					board.mergeTiles( currTile, tile );
 					tileMoved = tilesMoved = true;
@@ -194,24 +199,8 @@ Game.fn.slideDown = function(){
 				}
 			}
 		}
-	} if ( tilesMoved ) board.spawnTile();
+	} this.afterSlide( tilesMoved );
 }
-
-
-//----------------------------------------------------------------------
-
-
-/**
- *
- */
-Game.fn.unmergeTiles = function() {
-	var grid = this.board.grid;
-	for (var i = 0; i < this.board.size; i++)
-		for (var j = 0; j < this.board.size; j++)
-			if ( grid[i][j] ) 
-				grid[i][j].merged = false;
-}
-
 
 
 //----------------------------------------------------------------------
