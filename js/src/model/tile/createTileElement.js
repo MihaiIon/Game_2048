@@ -3,8 +3,9 @@
  */
 Tile.prototype.createTileElement = function() {
 	return $('<div>', { 
+		id : this.buildIDSelector(),
 		class: "tile tile-level-" + this.level 
-			+ " tile-position-" + this.x + "-" + this.y,
+			+ " " + this.buildPositionSelector(),
 		html : $('<div>', {
 			class: "tile-inner",
 			text: this.value

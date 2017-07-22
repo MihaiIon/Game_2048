@@ -3,15 +3,15 @@
  */
 Board.prototype.spawnTile = function() {
 	var s = this.findFreeSlot();
-	this.grid[s.i][s.j] = 
+	this.grid[s.x][s.y] = 
 		new Tile(
-			0,
-			s.i, s.j, 
+			this.idCount++,
+			s.x, s.y, 
 			Math.floor(Math.random()*2),
 			this 
 		);
 
-	this.tileCount++;
+	this.tilesCount++;
 };
 
 /**
@@ -23,7 +23,7 @@ Board.prototype.findFreeSlot = function() {
 	do {
 		i = Math.floor(Math.random()*this.size)
 		j = Math.floor(Math.random()*this.size)
-	} while(this.grid[i][j] != null);
+	} while(this.grid[j][i] != null);
 
-	return {i: i, j: j};
+	return {x: j, y: i};
 };

@@ -1,13 +1,15 @@
 /**
-* tile1 is the one that will be eliminated
-* tile2 is the one that will gain a level
-*/
-
-Board.prototype.mergeTiles = function(tile1_y, tile1_x, tile2_y, tile2_x)
+ * The <tile1> is merged to <tile2>. After the merging animation, <tile1>
+ * is removed from the DOM.
+ */
+Board.prototype.mergeTiles = function( tile1, tile2 )
 {
-	//deletes tile
-	this.removeTile(tile1_x, tile1_y);
+	// Move in DOM and remove.
+	tile1.$tile.removeClass( tile1.buildPositionSelector( tile1.x, tile1.y ) );
+	tile1.$tile.addClass( tile1.buildPositionSelector( tile2.x, tile2.y ) );
+	this.removeTile( tile1 );
 
-	//levels up tile
-	this.grid[tile2_y][tile2_x].levelUp();
+	// levels up tile
+	tile2.levelUp();
+	tile2.merged = true;
 }

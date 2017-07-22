@@ -49,14 +49,6 @@
 			PLAYER_WON: "Player Won",
 			PLAYER_LOST: "Player Lost"
 		},
-
-		/*
-		 * 
-		 */
-		SELECTORS: {
-			score: "#game--score",
-			maxScore: "#game--max-score"
-		}
 	}
 
 	window.Game = Game;

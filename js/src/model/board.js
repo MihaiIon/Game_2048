@@ -13,6 +13,9 @@ var Board = function( size ){
 		this.grid[i] = new Array( size );
 	}
 
+	// Track the number of created Tiles.
+	this.idCount = 0;
+
 	// Track number of tiles in Game.
 	this.tilesCount = 0;
 

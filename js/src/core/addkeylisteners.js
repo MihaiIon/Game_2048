@@ -3,29 +3,218 @@
  */
 Game.fn.addKeyListeners = function(){
 		
-		var _this = this;
+	var _this = this;
+	$(document).keyup(function(e) {
 
-		$(document).keyup(function(e) {
+		/*
+		 * - Slide Tiles.
+		 * - Reset.
+		 */
 	    switch(e.which) {
-	        case 37: _this.leftAction();	// left
-	        break;
-
-	        case 38: _this.upAction();		// up
-	        break;
-
-	        case 39: _this.rightAction();	// right
-	        break;
-
-	        case 40: _this.downAction();	// down
-	        break;
-
-	        case 82: _this.resetAction();	// r -> for reset
-	        default:
+	        case 37: _this.slideLeft(); 	break;
+	        case 38: _this.slideUp(); 		break;
+	        case 39: _this.slideRight();	break;
+	        case 40: _this.slideDown();		break;
+	        case 82: _this.reset();	// r -> for reset
 	    }
-	    e.preventDefault(); // prevent the default action (scroll / move caret)
+
+	    /*
+	     * Launch AI to check if the player lost.
+	     */
+	    switch(e.which) {
+	        case 37: 
+	        case 38: 
+	        case 39: 
+	        case 40: 
+	        	_this.unmergeTiles();
+	        	if(_this.board.isFull()){
+	        		// TODO.
+	        		console.log("BOARD IS FULL, MISSING AI.");
+	        	} break;
+	    }
+
+	    // prevent the default action (scroll / move caret)
+	    e.preventDefault(); 
 	});
 
 }
+
+
+//----------------------------------------------------------------------
+
+
+/**
+ *
+ */
+Game.fn.slideLeft = function(){
+
+	var currTile = null,
+		tilesMoved = false,
+		board = this.board;
+
+	for (var i = 0; i < board.size; i++) {
+		for (var j = 0; j < board.size; j++) {
+			if(currTile = board.grid[i][j])
+			{
+				/*
+				 * 	Find closest Tile and farthest freeSlot.
+				 */
+				var index = currTile.x,
+					tile = null,
+					freeSlotIndex = index,
+					tileMoved = false;
+				while( index > 0 && !tile ){
+					if(board.grid[--index][j])
+						tile = board.grid[index][j];
+					else freeSlotIndex = index;
+				}
+
+				/*
+				 * If a tile is found, check it's level and try to merge to it.
+				 * Else, move <currTile> to the farthest available slot (if it can moved).
+				 */
+				if( tile && !tile.merged && tile.level == currTile.level ){
+					board.mergeTiles( currTile, tile );
+					tileMoved = tilesMoved = true;
+				} else if( !tileMoved && freeSlotIndex != currTile.x ){
+					currTile.moveTo( freeSlotIndex, j );
+					tileMoved = tilesMoved = true;
+				}
+			}
+		}
+	} if ( tilesMoved ) board.spawnTile();
+}
+
+
+/**
+ *
+ */
+Game.fn.slideRight = function(){
+
+	var currTile = null,
+		tilesMoved = false,
+		board = this.board;
+
+	for (var i = board.size-1; i >= 0; i--) {
+		for (var j = 0; j < board.size; j++) {
+			if(currTile = board.grid[i][j])
+			{
+				var index = currTile.x,
+					tile = null,
+					freeSlotIndex = index,
+					tileMoved = false;
+				while( index < (board.size-1) && !tile ) {
+					if( board.grid[++index][j] ) 	tile = board.grid[index][j];
+					else 							freeSlotIndex = index;
+				}
+
+				if( tile && !tile.merged && tile.level == currTile.level ) {
+					board.mergeTiles( currTile, tile );
+					tileMoved = tilesMoved = true;
+				} else if( !tileMoved && freeSlotIndex != currTile.x ) {
+					currTile.moveTo( freeSlotIndex, j );
+					tileMoved = tilesMoved = true;
+				}
+			}
+		}
+	} if ( tilesMoved ) board.spawnTile();
+}
+
+
+/**
+ *
+ */
+Game.fn.slideUp = function(){
+
+	var currTile = null,
+		tilesMoved = false,
+		board = this.board;
+
+	for (var j = 0; j < board.size; j++) {
+		for (var i = 0; i < board.size; i++) {
+			if(currTile = board.grid[i][j])
+			{
+				var index = currTile.y,
+					tile = null,
+					freeSlotIndex = index,
+					tileMoved = false;
+				while( index > 0 && !tile ) {
+					if( board.grid[i][--index] ) 	tile = board.grid[i][index];
+					else 							freeSlotIndex = index;
+				}
+
+				if( tile && !tile.merged && tile.level == currTile.level ) {
+					board.mergeTiles( currTile, tile );
+					tileMoved = tilesMoved = true;
+				} else if( !tileMoved && freeSlotIndex != currTile.y ) {
+					currTile.moveTo( i, freeSlotIndex );
+					tileMoved = tilesMoved = true;
+				}
+			}
+		}
+	} if ( tilesMoved ) board.spawnTile();
+}
+
+
+/**
+ *
+ */
+Game.fn.slideDown = function(){
+
+	var currTile = null,
+		tilesMoved = false,
+		board = this.board;
+
+	for (var j = board.size-1; j >= 0; j--) {
+		for (var i = 0; i < board.size; i++) {
+			if(currTile = board.grid[i][j])
+			{
+				/*
+				 * 	Find closest Tile farthest freeSlot.
+				 */
+				var index = currTile.y,
+					tile = null,
+					freeSlotIndex = index,
+					tileMoved = false;
+				while( index < (board.size-1) && !tile ){
+					if(board.grid[i][++index]) 		tile = board.grid[i][index];
+					else 							freeSlotIndex = index;
+				}
+
+				/*
+				 * If a tile is found, check it's level and try to merge to it.
+				 * Else, move <currTile> to farthest available slot (if it can move).
+				 */
+				if( tile && !tile.merged && tile.level == currTile.level ){
+					board.mergeTiles( currTile, tile );
+					tileMoved = tilesMoved = true;
+				} else if( !tileMoved && freeSlotIndex != currTile.y ){
+					currTile.moveTo( i, freeSlotIndex );
+					tileMoved = tilesMoved = true;
+				}
+			}
+		}
+	} if ( tilesMoved ) board.spawnTile();
+}
+
+
+//----------------------------------------------------------------------
+
+
+/**
+ *
+ */
+Game.fn.unmergeTiles = function() {
+	var grid = this.board.grid;
+	for (var i = 0; i < this.board.size; i++)
+		for (var j = 0; j < this.board.size; j++)
+			if ( grid[i][j] ) 
+				grid[i][j].merged = false;
+}
+
+
+
+//----------------------------------------------------------------------
 
 //moves All tiles from their position to the next free position start 
 //from those closest to the proper side
@@ -33,7 +222,7 @@ Game.fn.addKeyListeners = function(){
 //****** IMPORTANT *********//
 // ALL POSITIONS ARE INVERTED AS SUCH -> (y,x)
 
-Game.fn.leftAction = function()
+/*Game.fn.leftAction = function()
 {
 	console.log("left");
 	var currentTile = null,
@@ -198,10 +387,9 @@ Game.fn.downAction = function()
 		}
 	}
 	board.spawnTile();
-}
+} */
 
-Game.fn.resetAction = function()
+Game.fn.reset = function()
 {
-	console.log("reset");
 	this.start( this.board.size );
 }

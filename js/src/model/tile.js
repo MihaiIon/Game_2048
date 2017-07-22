@@ -13,6 +13,9 @@ var Tile = function( id, x, y, lvl, board ){
 	this.level = lvl;
 	this.value = this.getValueForLevel(lvl);
 
+	// Indicates if the Tile has merged with another Tile.
+	this.merged = false;
+
 	// Delay append.
 	var _this = this;
 	setTimeout(function(){
@@ -21,12 +24,12 @@ var Tile = function( id, x, y, lvl, board ){
 		_this.board.$board.find(_this.board.TILES_SELECTOR).append( _this.createTileElement() );
 
 		// Save Tile
-		_this.$tile = board.$board.find( "." + _this.buildPositionSelector( _this.x, _this.y ) );
+		_this.$tile = board.$board.find( "#" + _this.buildIDSelector() );
 
 		// Popping Animation.
 		_this.pop();
 
-	}, 120);
+	}, 100);
 }
 
 

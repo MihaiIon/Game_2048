@@ -199,11 +199,16 @@ div, h1, p, button, input, span {
 	left: 0px;
 	transition: all 0.1s ease-in-out;
 	transform-origin: center center;
+	z-index: 1;
 }
 
 .tile-inner {
 	font-size: 3.2em;
 	font-weight: bold;
+}
+
+.tile-fade {
+	z-index: 0 !important;
 }
 
 .game--board-size-6 .tile-inner {  font-size: 2.5em; }
@@ -273,227 +278,227 @@ div, h1, p, button, input, span {
 
 /* Size 4 */
 
-.game--board-size-4 .tile-position-0-1 { left: 129px; }
-.game--board-size-4 .tile-position-0-2 { left: 258px; }
-.game--board-size-4 .tile-position-0-3 { left: 387px; }
+.game--board-size-4 .tile-position-1-0 { left: 129px; }
+.game--board-size-4 .tile-position-2-0 { left: 258px; }
+.game--board-size-4 .tile-position-3-0 { left: 387px; }
 
-.game--board-size-4 .tile-position-1-0 { top: 129px; }
+.game--board-size-4 .tile-position-0-1 { top: 129px; }
 .game--board-size-4 .tile-position-1-1 { top: 129px; left: 129px; }
-.game--board-size-4 .tile-position-1-2 { top: 129px; left: 258px; }
-.game--board-size-4 .tile-position-1-3 { top: 129px; left: 387px; }
+.game--board-size-4 .tile-position-2-1 { top: 129px; left: 258px; }
+.game--board-size-4 .tile-position-3-1 { top: 129px; left: 387px; }
 
-.game--board-size-4 .tile-position-2-0 { top: 258px; }
-.game--board-size-4 .tile-position-2-1 { top: 258px; left: 129px; }
+.game--board-size-4 .tile-position-0-2 { top: 258px; }
+.game--board-size-4 .tile-position-1-2 { top: 258px; left: 129px; }
 .game--board-size-4 .tile-position-2-2 { top: 258px; left: 258px; }
-.game--board-size-4 .tile-position-2-3 { top: 258px; left: 387px; }
+.game--board-size-4 .tile-position-3-2 { top: 258px; left: 387px; }
 
-.game--board-size-4 .tile-position-3-0 { top: 387px; }
-.game--board-size-4 .tile-position-3-1 { top: 387px; left: 129px; }
-.game--board-size-4 .tile-position-3-2 { top: 387px; left: 258px; }
+.game--board-size-4 .tile-position-0-3 { top: 387px; }
+.game--board-size-4 .tile-position-1-3 { top: 387px; left: 129px; }
+.game--board-size-4 .tile-position-2-3 { top: 387px; left: 258px; }
 .game--board-size-4 .tile-position-3-3 { top: 387px; left: 387px; }
 
 /* Size 5 */
 
-.game--board-size-5 .tile-position-0-1 { left: 102px; }
-.game--board-size-5 .tile-position-0-2 { left: 204px; }
-.game--board-size-5 .tile-position-0-3 { left: 306px; }
-.game--board-size-5 .tile-position-0-4 { left: 408px; }
+.game--board-size-5 .tile-position-1-0 { left: 102px; }
+.game--board-size-5 .tile-position-2-0 { left: 204px; }
+.game--board-size-5 .tile-position-3-0 { left: 306px; }
+.game--board-size-5 .tile-position-4-0 { left: 408px; }
 
-.game--board-size-5 .tile-position-1-0 { top: 102px; }
+.game--board-size-5 .tile-position-0-1 { top: 102px; }
 .game--board-size-5 .tile-position-1-1 { top: 102px; left: 102px; }
-.game--board-size-5 .tile-position-1-2 { top: 102px; left: 204px; }
-.game--board-size-5 .tile-position-1-3 { top: 102px; left: 306px; }
-.game--board-size-5 .tile-position-1-4 { top: 102px; left: 408px; }
+.game--board-size-5 .tile-position-2-1 { top: 102px; left: 204px; }
+.game--board-size-5 .tile-position-3-1 { top: 102px; left: 306px; }
+.game--board-size-5 .tile-position-4-1 { top: 102px; left: 408px; }
 
-.game--board-size-5 .tile-position-2-0 { top: 204px; }
-.game--board-size-5 .tile-position-2-1 { top: 204px; left: 102px; }
+.game--board-size-5 .tile-position-0-2 { top: 204px; }
+.game--board-size-5 .tile-position-1-2 { top: 204px; left: 102px; }
 .game--board-size-5 .tile-position-2-2 { top: 204px; left: 204px; }
-.game--board-size-5 .tile-position-2-3 { top: 204px; left: 306px; }
-.game--board-size-5 .tile-position-2-4 { top: 204px; left: 408px; }
+.game--board-size-5 .tile-position-3-2 { top: 204px; left: 306px; }
+.game--board-size-5 .tile-position-4-2 { top: 204px; left: 408px; }
 
-.game--board-size-5 .tile-position-3-0 { top: 306px; }
-.game--board-size-5 .tile-position-3-1 { top: 306px; left: 102px; }
-.game--board-size-5 .tile-position-3-2 { top: 306px; left: 204px; }
+.game--board-size-5 .tile-position-0-3 { top: 306px; }
+.game--board-size-5 .tile-position-1-3 { top: 306px; left: 102px; }
+.game--board-size-5 .tile-position-2-3 { top: 306px; left: 204px; }
 .game--board-size-5 .tile-position-3-3 { top: 306px; left: 306px; }
-.game--board-size-5 .tile-position-3-4 { top: 306px; left: 408px; }
+.game--board-size-5 .tile-position-4-3 { top: 306px; left: 408px; }
 
-.game--board-size-5 .tile-position-4-0 { top: 408px; }
-.game--board-size-5 .tile-position-4-1 { top: 408px; left: 102px; }
-.game--board-size-5 .tile-position-4-2 { top: 408px; left: 204px; }
-.game--board-size-5 .tile-position-4-3 { top: 408px; left: 306px; }
+.game--board-size-5 .tile-position-0-4 { top: 408px; }
+.game--board-size-5 .tile-position-1-4 { top: 408px; left: 102px; }
+.game--board-size-5 .tile-position-2-4 { top: 408px; left: 204px; }
+.game--board-size-5 .tile-position-3-4 { top: 408px; left: 306px; }
 .game--board-size-5 .tile-position-4-4 { top: 408px; left: 408px; }
 
 /* Size 6 */
 
-.game--board-size-6 .tile-position-0-1 { left: 84px; }
-.game--board-size-6 .tile-position-0-2 { left: 168px; }
-.game--board-size-6 .tile-position-0-3 { left: 253px; }
-.game--board-size-6 .tile-position-0-4 { left: 338px; }
-.game--board-size-6 .tile-position-0-5 { left: 423px; }
+.game--board-size-6 .tile-position-1-0 { left: 84px; }
+.game--board-size-6 .tile-position-2-0 { left: 168px; }
+.game--board-size-6 .tile-position-3-0 { left: 253px; }
+.game--board-size-6 .tile-position-4-0 { left: 338px; }
+.game--board-size-6 .tile-position-5-0 { left: 423px; }
 
-.game--board-size-6 .tile-position-1-0 { top: 84px; }
+.game--board-size-6 .tile-position-0-1 { top: 84px; }
 .game--board-size-6 .tile-position-1-1 { top: 84px; left: 84px; }
-.game--board-size-6 .tile-position-1-2 { top: 84px; left: 168px; }
-.game--board-size-6 .tile-position-1-3 { top: 84px; left: 253px; }
-.game--board-size-6 .tile-position-1-4 { top: 84px; left: 338px; }
-.game--board-size-6 .tile-position-1-5 { top: 84px; left: 423px; }
+.game--board-size-6 .tile-position-2-1 { top: 84px; left: 168px; }
+.game--board-size-6 .tile-position-3-1 { top: 84px; left: 253px; }
+.game--board-size-6 .tile-position-4-1 { top: 84px; left: 338px; }
+.game--board-size-6 .tile-position-5-1 { top: 84px; left: 423px; }
 
-.game--board-size-6 .tile-position-2-0 { top: 168px; }
-.game--board-size-6 .tile-position-2-1 { top: 168px; left: 84px; }
+.game--board-size-6 .tile-position-0-2 { top: 168px; }
+.game--board-size-6 .tile-position-1-2 { top: 168px; left: 84px; }
 .game--board-size-6 .tile-position-2-2 { top: 168px; left: 168px; }
-.game--board-size-6 .tile-position-2-3 { top: 168px; left: 253px; }
-.game--board-size-6 .tile-position-2-4 { top: 168px; left: 338px; }
-.game--board-size-6 .tile-position-2-5 { top: 168px; left: 423px; }
+.game--board-size-6 .tile-position-3-2 { top: 168px; left: 253px; }
+.game--board-size-6 .tile-position-4-2 { top: 168px; left: 338px; }
+.game--board-size-6 .tile-position-5-2 { top: 168px; left: 423px; }
 
-.game--board-size-6 .tile-position-3-0 { top: 253px; }
-.game--board-size-6 .tile-position-3-1 { top: 253px; left: 84px; }
-.game--board-size-6 .tile-position-3-2 { top: 253px; left: 168px; }
+.game--board-size-6 .tile-position-0-3 { top: 253px; }
+.game--board-size-6 .tile-position-1-3 { top: 253px; left: 84px; }
+.game--board-size-6 .tile-position-2-3 { top: 253px; left: 168px; }
 .game--board-size-6 .tile-position-3-3 { top: 253px; left: 253px; }
-.game--board-size-6 .tile-position-3-4 { top: 253px; left: 338px; }
-.game--board-size-6 .tile-position-3-5 { top: 253px; left: 423px; }
+.game--board-size-6 .tile-position-4-3 { top: 253px; left: 338px; }
+.game--board-size-6 .tile-position-5-3 { top: 253px; left: 423px; }
 
-.game--board-size-6 .tile-position-4-0 { top: 338px; }
-.game--board-size-6 .tile-position-4-1 { top: 338px; left: 84px; }
-.game--board-size-6 .tile-position-4-2 { top: 338px; left: 168px; }
-.game--board-size-6 .tile-position-4-3 { top: 338px; left: 253px; }
+.game--board-size-6 .tile-position-0-4 { top: 338px; }
+.game--board-size-6 .tile-position-1-4 { top: 338px; left: 84px; }
+.game--board-size-6 .tile-position-2-4 { top: 338px; left: 168px; }
+.game--board-size-6 .tile-position-3-4 { top: 338px; left: 253px; }
 .game--board-size-6 .tile-position-4-4 { top: 338px; left: 338px; }
-.game--board-size-6 .tile-position-4-5 { top: 338px; left: 423px; }
+.game--board-size-6 .tile-position-5-4 { top: 338px; left: 423px; }
 
-.game--board-size-6 .tile-position-5-0 { top: 423px; }
-.game--board-size-6 .tile-position-5-1 { top: 423px; left: 84px; }
-.game--board-size-6 .tile-position-5-2 { top: 423px; left: 168px; }
-.game--board-size-6 .tile-position-5-3 { top: 423px; left: 253px; }
-.game--board-size-6 .tile-position-5-4 { top: 423px; left: 338px; }
+.game--board-size-6 .tile-position-0-5 { top: 423px; }
+.game--board-size-6 .tile-position-1-5 { top: 423px; left: 84px; }
+.game--board-size-6 .tile-position-2-5 { top: 423px; left: 168px; }
+.game--board-size-6 .tile-position-3-5 { top: 423px; left: 253px; }
+.game--board-size-6 .tile-position-4-5 { top: 423px; left: 338px; }
 .game--board-size-6 .tile-position-5-5 { top: 423px; left: 423px; }
 
 /* Size 7 */
 
-.game--board-size-7 .tile-position-0-1 { left: 73px;  }
-.game--board-size-7 .tile-position-0-2 { left: 145px; }
-.game--board-size-7 .tile-position-0-3 { left: 218px; }
-.game--board-size-7 .tile-position-0-4 { left: 290px; }
-.game--board-size-7 .tile-position-0-5 { left: 362px; }
-.game--board-size-7 .tile-position-0-6 { left: 434px; }
+.game--board-size-7 .tile-position-1-0 { left: 73px;  }
+.game--board-size-7 .tile-position-2-0 { left: 145px; }
+.game--board-size-7 .tile-position-3-0 { left: 218px; }
+.game--board-size-7 .tile-position-4-0 { left: 290px; }
+.game--board-size-7 .tile-position-5-0 { left: 362px; }
+.game--board-size-7 .tile-position-6-0 { left: 434px; }
 
-.game--board-size-7 .tile-position-1-0 { top: 73px; }
+.game--board-size-7 .tile-position-0-1 { top: 73px; }
 .game--board-size-7 .tile-position-1-1 { top: 73px; left: 73px; }
-.game--board-size-7 .tile-position-1-2 { top: 73px; left: 145px; }
-.game--board-size-7 .tile-position-1-3 { top: 73px; left: 218px; }
-.game--board-size-7 .tile-position-1-4 { top: 73px; left: 290px; }
-.game--board-size-7 .tile-position-1-5 { top: 73px; left: 362px; }
-.game--board-size-7 .tile-position-1-6 { top: 73px; left: 434px; }
+.game--board-size-7 .tile-position-2-1 { top: 73px; left: 145px; }
+.game--board-size-7 .tile-position-3-1 { top: 73px; left: 218px; }
+.game--board-size-7 .tile-position-4-1 { top: 73px; left: 290px; }
+.game--board-size-7 .tile-position-5-1 { top: 73px; left: 362px; }
+.game--board-size-7 .tile-position-6-1 { top: 73px; left: 434px; }
 
-.game--board-size-7 .tile-position-2-0 { top: 145px; }
-.game--board-size-7 .tile-position-2-1 { top: 145px; left: 73px; }
+.game--board-size-7 .tile-position-0-2 { top: 145px; }
+.game--board-size-7 .tile-position-1-2 { top: 145px; left: 73px; }
 .game--board-size-7 .tile-position-2-2 { top: 145px; left: 145px; }
-.game--board-size-7 .tile-position-2-3 { top: 145px; left: 218px; }
-.game--board-size-7 .tile-position-2-4 { top: 145px; left: 290px; }
-.game--board-size-7 .tile-position-2-5 { top: 145px; left: 362px; }
-.game--board-size-7 .tile-position-2-6 { top: 145px; left: 434px; }
+.game--board-size-7 .tile-position-3-2 { top: 145px; left: 218px; }
+.game--board-size-7 .tile-position-4-2 { top: 145px; left: 290px; }
+.game--board-size-7 .tile-position-5-2 { top: 145px; left: 362px; }
+.game--board-size-7 .tile-position-6-2 { top: 145px; left: 434px; }
 
-.game--board-size-7 .tile-position-3-0 { top: 218px; }
-.game--board-size-7 .tile-position-3-1 { top: 218px; left: 73px; }
-.game--board-size-7 .tile-position-3-2 { top: 218px; left: 145px; }
+.game--board-size-7 .tile-position-0-3 { top: 218px; }
+.game--board-size-7 .tile-position-1-3 { top: 218px; left: 73px; }
+.game--board-size-7 .tile-position-2-3 { top: 218px; left: 145px; }
 .game--board-size-7 .tile-position-3-3 { top: 218px; left: 218px; }
-.game--board-size-7 .tile-position-3-4 { top: 218px; left: 290px; }
-.game--board-size-7 .tile-position-3-5 { top: 218px; left: 362px; }
-.game--board-size-7 .tile-position-3-6 { top: 218px; left: 434px; }
+.game--board-size-7 .tile-position-4-3 { top: 218px; left: 290px; }
+.game--board-size-7 .tile-position-5-3 { top: 218px; left: 362px; }
+.game--board-size-7 .tile-position-6-3 { top: 218px; left: 434px; }
 
-.game--board-size-7 .tile-position-4-0 { top: 290px; }
-.game--board-size-7 .tile-position-4-1 { top: 290px; left: 73px; }
-.game--board-size-7 .tile-position-4-2 { top: 290px; left: 145px; }
-.game--board-size-7 .tile-position-4-3 { top: 290px; left: 218px; }
+.game--board-size-7 .tile-position-0-4 { top: 290px; }
+.game--board-size-7 .tile-position-1-4 { top: 290px; left: 73px; }
+.game--board-size-7 .tile-position-2-4 { top: 290px; left: 145px; }
+.game--board-size-7 .tile-position-3-4 { top: 290px; left: 218px; }
 .game--board-size-7 .tile-position-4-4 { top: 290px; left: 290px; }
-.game--board-size-7 .tile-position-4-5 { top: 290px; left: 362px; }
-.game--board-size-7 .tile-position-4-6 { top: 290px; left: 434px; }
+.game--board-size-7 .tile-position-5-4 { top: 290px; left: 362px; }
+.game--board-size-7 .tile-position-6-4 { top: 290px; left: 434px; }
 
-.game--board-size-7 .tile-position-5-0 { top: 362px; }
-.game--board-size-7 .tile-position-5-1 { top: 362px; left: 73px; }
-.game--board-size-7 .tile-position-5-2 { top: 362px; left: 145px; }
-.game--board-size-7 .tile-position-5-3 { top: 362px; left: 218px; }
-.game--board-size-7 .tile-position-5-4 { top: 362px; left: 290px; }
+.game--board-size-7 .tile-position-0-5 { top: 362px; }
+.game--board-size-7 .tile-position-1-5 { top: 362px; left: 73px; }
+.game--board-size-7 .tile-position-2-5 { top: 362px; left: 145px; }
+.game--board-size-7 .tile-position-3-5 { top: 362px; left: 218px; }
+.game--board-size-7 .tile-position-4-5 { top: 362px; left: 290px; }
 .game--board-size-7 .tile-position-5-5 { top: 362px; left: 362px; }
-.game--board-size-7 .tile-position-5-6 { top: 362px; left: 434px; }
+.game--board-size-7 .tile-position-6-5 { top: 362px; left: 434px; }
 
-.game--board-size-7 .tile-position-6-0 { top: 434px; }
-.game--board-size-7 .tile-position-6-1 { top: 434px; left: 73px; }
-.game--board-size-7 .tile-position-6-2 { top: 434px; left: 145px; }
-.game--board-size-7 .tile-position-6-3 { top: 434px; left: 218px; }
-.game--board-size-7 .tile-position-6-4 { top: 434px; left: 290px; }
-.game--board-size-7 .tile-position-6-5 { top: 434px; left: 362px; }
+.game--board-size-7 .tile-position-0-6 { top: 434px; }
+.game--board-size-7 .tile-position-1-6 { top: 434px; left: 73px; }
+.game--board-size-7 .tile-position-2-6 { top: 434px; left: 145px; }
+.game--board-size-7 .tile-position-3-6 { top: 434px; left: 218px; }
+.game--board-size-7 .tile-position-4-6 { top: 434px; left: 290px; }
+.game--board-size-7 .tile-position-5-6 { top: 434px; left: 362px; }
 .game--board-size-7 .tile-position-6-6 { top: 434px; left: 434px; }
 
 /* Size 8 */
 
-.game--board-size-8 .tile-position-0-1 { left: 64px;  }
-.game--board-size-8 .tile-position-0-2 { left: 127px; }
-.game--board-size-8 .tile-position-0-3 { left: 190px; }
-.game--board-size-8 .tile-position-0-4 { left: 254px; }
-.game--board-size-8 .tile-position-0-5 { left: 317px; }
-.game--board-size-8 .tile-position-0-6 { left: 381px; }
-.game--board-size-8 .tile-position-0-7 { left: 444px; }
+.game--board-size-8 .tile-position-1-0 { left: 64px;  }
+.game--board-size-8 .tile-position-2-0 { left: 127px; }
+.game--board-size-8 .tile-position-3-0 { left: 190px; }
+.game--board-size-8 .tile-position-4-0 { left: 254px; }
+.game--board-size-8 .tile-position-5-0 { left: 317px; }
+.game--board-size-8 .tile-position-6-0 { left: 381px; }
+.game--board-size-8 .tile-position-7-0 { left: 444px; }
 
-.game--board-size-8 .tile-position-1-0 { top: 64px; }
+.game--board-size-8 .tile-position-0-1 { top: 64px; }
 .game--board-size-8 .tile-position-1-1 { top: 64px; left: 64px; }
-.game--board-size-8 .tile-position-1-2 { top: 64px; left: 127px; }
-.game--board-size-8 .tile-position-1-3 { top: 64px; left: 190px; }
-.game--board-size-8 .tile-position-1-4 { top: 64px; left: 254px; }
-.game--board-size-8 .tile-position-1-5 { top: 64px; left: 317px; }
-.game--board-size-8 .tile-position-1-6 { top: 64px; left: 381px; }
-.game--board-size-8 .tile-position-1-7 { top: 64px; left: 444px; }
+.game--board-size-8 .tile-position-2-1 { top: 64px; left: 127px; }
+.game--board-size-8 .tile-position-3-1 { top: 64px; left: 190px; }
+.game--board-size-8 .tile-position-4-1 { top: 64px; left: 254px; }
+.game--board-size-8 .tile-position-5-1 { top: 64px; left: 317px; }
+.game--board-size-8 .tile-position-6-1 { top: 64px; left: 381px; }
+.game--board-size-8 .tile-position-7-1 { top: 64px; left: 444px; }
 
-.game--board-size-8 .tile-position-2-0 { top: 127px; }
-.game--board-size-8 .tile-position-2-1 { top: 127px; left: 64px; }
+.game--board-size-8 .tile-position-0-2 { top: 127px; }
+.game--board-size-8 .tile-position-1-2 { top: 127px; left: 64px; }
 .game--board-size-8 .tile-position-2-2 { top: 127px; left: 127px; }
-.game--board-size-8 .tile-position-2-3 { top: 127px; left: 190px; }
-.game--board-size-8 .tile-position-2-4 { top: 127px; left: 254px; }
-.game--board-size-8 .tile-position-2-5 { top: 127px; left: 317px; }
-.game--board-size-8 .tile-position-2-6 { top: 127px; left: 381px; }
-.game--board-size-8 .tile-position-2-7 { top: 127px; left: 444px; }
+.game--board-size-8 .tile-position-3-2 { top: 127px; left: 190px; }
+.game--board-size-8 .tile-position-4-2 { top: 127px; left: 254px; }
+.game--board-size-8 .tile-position-5-2 { top: 127px; left: 317px; }
+.game--board-size-8 .tile-position-6-2 { top: 127px; left: 381px; }
+.game--board-size-8 .tile-position-7-2 { top: 127px; left: 444px; }
 
-.game--board-size-8 .tile-position-3-0 { top: 190px; }
-.game--board-size-8 .tile-position-3-1 { top: 190px; left: 64px; }
-.game--board-size-8 .tile-position-3-2 { top: 190px; left: 127px; }
+.game--board-size-8 .tile-position-0-3 { top: 190px; }
+.game--board-size-8 .tile-position-1-3 { top: 190px; left: 64px; }
+.game--board-size-8 .tile-position-2-3 { top: 190px; left: 127px; }
 .game--board-size-8 .tile-position-3-3 { top: 190px; left: 190px; }
-.game--board-size-8 .tile-position-3-4 { top: 190px; left: 254px; }
-.game--board-size-8 .tile-position-3-5 { top: 190px; left: 317px; }
-.game--board-size-8 .tile-position-3-6 { top: 190px; left: 381px; }
-.game--board-size-8 .tile-position-3-7 { top: 190px; left: 444px; }
+.game--board-size-8 .tile-position-4-3 { top: 190px; left: 254px; }
+.game--board-size-8 .tile-position-5-3 { top: 190px; left: 317px; }
+.game--board-size-8 .tile-position-6-3 { top: 190px; left: 381px; }
+.game--board-size-8 .tile-position-7-3 { top: 190px; left: 444px; }
 
-.game--board-size-8 .tile-position-4-0 { top: 254px; }
-.game--board-size-8 .tile-position-4-1 { top: 254px; left: 64px; }
-.game--board-size-8 .tile-position-4-2 { top: 254px; left: 127px; }
-.game--board-size-8 .tile-position-4-3 { top: 254px; left: 190px; }
+.game--board-size-8 .tile-position-0-4 { top: 254px; }
+.game--board-size-8 .tile-position-1-4 { top: 254px; left: 64px; }
+.game--board-size-8 .tile-position-2-4 { top: 254px; left: 127px; }
+.game--board-size-8 .tile-position-3-4 { top: 254px; left: 190px; }
 .game--board-size-8 .tile-position-4-4 { top: 254px; left: 254px; }
-.game--board-size-8 .tile-position-4-5 { top: 254px; left: 317px; }
-.game--board-size-8 .tile-position-4-6 { top: 254px; left: 381px; }
-.game--board-size-8 .tile-position-4-7 { top: 254px; left: 444px; }
+.game--board-size-8 .tile-position-5-4 { top: 254px; left: 317px; }
+.game--board-size-8 .tile-position-6-4 { top: 254px; left: 381px; }
+.game--board-size-8 .tile-position-7-4 { top: 254px; left: 444px; }
 
-.game--board-size-8 .tile-position-5-0 { top: 317px; }
-.game--board-size-8 .tile-position-5-1 { top: 317px; left: 64px; }
-.game--board-size-8 .tile-position-5-2 { top: 317px; left: 127px; }
-.game--board-size-8 .tile-position-5-3 { top: 317px; left: 190px; }
-.game--board-size-8 .tile-position-5-4 { top: 317px; left: 254px; }
+.game--board-size-8 .tile-position-0-5 { top: 317px; }
+.game--board-size-8 .tile-position-1-5 { top: 317px; left: 64px; }
+.game--board-size-8 .tile-position-2-5 { top: 317px; left: 127px; }
+.game--board-size-8 .tile-position-3-5 { top: 317px; left: 190px; }
+.game--board-size-8 .tile-position-4-5 { top: 317px; left: 254px; }
 .game--board-size-8 .tile-position-5-5 { top: 317px; left: 317px; }
-.game--board-size-8 .tile-position-5-6 { top: 317px; left: 381px; }
-.game--board-size-8 .tile-position-5-7 { top: 317px; left: 444px; }
+.game--board-size-8 .tile-position-6-5 { top: 317px; left: 381px; }
+.game--board-size-8 .tile-position-7-5 { top: 317px; left: 444px; }
 
-.game--board-size-8 .tile-position-6-0 { top: 381px; }
-.game--board-size-8 .tile-position-6-1 { top: 381px; left: 64px; }
-.game--board-size-8 .tile-position-6-2 { top: 381px; left: 127px; }
-.game--board-size-8 .tile-position-6-3 { top: 381px; left: 190px; }
-.game--board-size-8 .tile-position-6-4 { top: 381px; left: 254px; }
-.game--board-size-8 .tile-position-6-5 { top: 381px; left: 317px; }
+.game--board-size-8 .tile-position-0-6 { top: 381px; }
+.game--board-size-8 .tile-position-1-6 { top: 381px; left: 64px; }
+.game--board-size-8 .tile-position-2-6 { top: 381px; left: 127px; }
+.game--board-size-8 .tile-position-3-6 { top: 381px; left: 190px; }
+.game--board-size-8 .tile-position-4-6 { top: 381px; left: 254px; }
+.game--board-size-8 .tile-position-5-6 { top: 381px; left: 317px; }
 .game--board-size-8 .tile-position-6-6 { top: 381px; left: 381px; }
-.game--board-size-8 .tile-position-6-7 { top: 381px; left: 444px; }
+.game--board-size-8 .tile-position-7-6 { top: 381px; left: 444px; }
 
-.game--board-size-8 .tile-position-7-0 { top: 444px; }
-.game--board-size-8 .tile-position-7-1 { top: 444px; left: 64px; }
-.game--board-size-8 .tile-position-7-2 { top: 444px; left: 127px; }
-.game--board-size-8 .tile-position-7-3 { top: 444px; left: 190px; }
-.game--board-size-8 .tile-position-7-4 { top: 444px; left: 254px; }
-.game--board-size-8 .tile-position-7-5 { top: 444px; left: 317px; }
-.game--board-size-8 .tile-position-7-6 { top: 444px; left: 381px; }
+.game--board-size-8 .tile-position-0-7 { top: 444px; }
+.game--board-size-8 .tile-position-1-7 { top: 444px; left: 64px; }
+.game--board-size-8 .tile-position-2-7 { top: 444px; left: 127px; }
+.game--board-size-8 .tile-position-3-7 { top: 444px; left: 190px; }
+.game--board-size-8 .tile-position-4-7 { top: 444px; left: 254px; }
+.game--board-size-8 .tile-position-5-7 { top: 444px; left: 317px; }
+.game--board-size-8 .tile-position-6-7 { top: 444px; left: 381px; }
 .game--board-size-8 .tile-position-7-7 { top: 444px; left: 444px; }
 
 
@@ -525,7 +530,7 @@ footer span {
  */
 .tile-level-up, .tile:hover {
 	transform: scale(1, 1);
-	animation: pop 0.1s ease 2 alternate;
+	animation: pop 0.08s ease 2 alternate;
 }
 
 @keyframes pop {
