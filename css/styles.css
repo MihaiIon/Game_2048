@@ -179,6 +179,32 @@ div, h1, p, button, input, span {
 { margin-right: 0.4em;  }
 
 
+/**---------------------------------------------------------------------------------------
+ * 
+ * Board - Overlay
+ *
+ */
+
+#game--game-over-overlay {
+	width: 500px;
+	height: 500px;
+	z-index: 1000;
+	position: absolute;
+	border-radius: 1%;
+	background-color: rgba(0, 0, 0, 0.88);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#game--game-over-overlay h1 {
+	color: white;
+	padding: 0 1em;
+	text-align: center;
+	line-height: 2.5em;
+}
+
+
 
 /**---------------------------------------------------------------------------------------
  * 

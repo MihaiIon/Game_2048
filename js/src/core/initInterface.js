@@ -6,7 +6,8 @@ Game.fn.initInterface = function(){
 	// Map Interface. 
 	this.$startBtn = $('#game--start-btn');
 	this.$gameScore = $('#game--score');
-	this.$gameBestScore = $('#game--best-score');
+	this.$gameMoves = $('#game--moves');
+	this.$overlay = $('#game--game-over-overlay');
 
 	// Start action.
 	var _this = this;

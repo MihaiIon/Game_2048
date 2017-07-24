@@ -20,7 +20,7 @@ Game.fn.init = function ( options ){
 		// Controls the flow of the game.
 		this.state = this.STATE.IDLE;
 		this.currentScore = 0;
-		this.bestScore = 0;
+		this.totalMoves = 0;
 
 		// Correct size if 'undefined' or 'null'.
 		this.initInterface();

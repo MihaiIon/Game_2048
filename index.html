@@ -15,7 +15,10 @@
 	<script type="text/javascript" src="js/src/core/initboard.js"></script>
 	<script type="text/javascript" src="js/src/core/initInterface.js"></script>
 	<script type="text/javascript" src="js/src/core/start.js"></script>
+	<script type="text/javascript" src="js/src/core/reset.js"></script>
 	<script type="text/javascript" src="js/src/core/gameover.js"></script>
+	<script type="text/javascript" src="js/src/core/addToScore.js"></script>
+	<script type="text/javascript" src="js/src/core/incrementMoves.js"></script>
 
 	<!-- Model :: Board -->
 	<script type="text/javascript" src="js/src/model/board.js"></script>
@@ -51,8 +54,8 @@
 						<p id="game--score" class="game--stats-value"></p>
 					</div>
 					<div class="game--stats-box">
-						<div class="game--stats-title">Best</div>
-						<p id="game--best-score" class="game--stats-value"></p>
+						<div class="game--stats-title">Moves</div>
+						<p id="game--moves" class="game--stats-value"></p>
 					</div>
 				</div>
 			</div>
@@ -67,6 +70,9 @@
 		<div id="game--board" class="game--board-size-4">
 			<div class="board-grid"></div>
 			<div id="game--tiles" class="board-tiles"></div>
+			<div id="game--game-over-overlay" class="game--overlay-hidden">
+				<h1>The Game is Over Press 'R' to start a new game with the same settings</h1>
+			</div>
 		</div>
 		<footer>
 			<p><span>p1012378</span> and <span>20050762</span></p>

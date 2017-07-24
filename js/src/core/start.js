@@ -6,6 +6,9 @@ Game.fn.start = function( size ){
 	// Reset Score.
 	this.$gameScore.text("0");
 
+	// Remove Overlay
+	this.$overlay.hide();
+
 	// Resize the board if needed.
 	if ( this.board && size == this.board.size ) {
 
@@ -15,7 +18,7 @@ Game.fn.start = function( size ){
 	} else {
 		
 		this.initBoard( size );
-		this.$gameBestScore.text("0");
+		this.$gameMoves.text("0");
 
 	}
 

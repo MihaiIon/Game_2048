@@ -14,7 +14,7 @@ Board.prototype.reset = function() {
 	// Clears the tiles from the DOM.
 	this.$board.find(this.TILES_SELECTOR).empty(); 
 
-	// Fills the grid with 2 or 3 Tiles to begin a new game.
-	for (var i = 0; i < (Math.floor(Math.random()*2) + 2); i++)
+	// Fills the grid with 2 Tiles to begin a new game.
+	for (var i = 0; i < 2; i++)
 		this.spawnTile();
 };
