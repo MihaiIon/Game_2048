@@ -247,41 +247,41 @@ div, h1, p, button, input, span {
  *
  */
 
-.tile-level-0 { background-color: #69eabb; }
-.tile-level-0 .tile-inner { color: #1d332b; }
+.tile-level-0 { background-color: #23a66d; }
+.tile-level-0 .tile-inner { color: #f0f0f0; }
 
-.tile-level-1 { background-color: #44dc64; }
-.tile-level-1 .tile-inner { color: #093815; }
+.tile-level-1 { background-color: #d4881c; }
+.tile-level-1 .tile-inner { color: #f0f0f0; }
 
-.tile-level-2 { background-color: #f9f13e; }
-.tile-level-2 .tile-inner { color: #48450c; }
+.tile-level-2 { background-color: #da2e2e; }
+.tile-level-2 .tile-inner { color: #f0f0f0; }
 
-.tile-level-3 { background-color: #de49ab; }
-.tile-level-3 .tile-inner { color: #460f33; }
+.tile-level-3 { background-color: #d32243; }
+.tile-level-3 .tile-inner { color: #f0f0f0; }
 
-.tile-level-4 { background-color: #f05cbd; }
-.tile-level-4 .tile-inner { color: #32463f; }
+.tile-level-4 { background-color: #238546; }
+.tile-level-4 .tile-inner { color: #f0f0f0; }
 
-.tile-level-5 { background-color: #74c3a6; }
-.tile-level-5 .tile-inner { color: #32463f; }
+.tile-level-5 { background-color: #40392e; }
+.tile-level-5 .tile-inner { color: #f0f0f0; }
 
-.tile-level-6 { background-color: #74c3a6; }
-.tile-level-6 .tile-inner { color: #32463f; }
+.tile-level-6 { background-color: #f0f0f0; }
+.tile-level-6 .tile-inner { color: #23a66d; }
 
-.tile-level-7 { background-color: #74c3a6; }
-.tile-level-7 .tile-inner { color: #32463f; }
+.tile-level-7 { background-color: #f0f0f0; }
+.tile-level-7 .tile-inner { color: #d4881c; }
 
-.tile-level-8 { background-color: #74c3a6; }
-.tile-level-8 .tile-inner { color: #32463f; }
+.tile-level-8 { background-color: #f0f0f0; }
+.tile-level-8 .tile-inner { color: #da2e2e; }
 
-.tile-level-9 { background-color: #74c3a6; }
-.tile-level-9 .tile-inner { color: #32463f; }
+.tile-level-9 { background-color: #f0f0f0; }
+.tile-level-9 .tile-inner { color: #613f73; }
 
-.tile-level-9 { background-color: #74c3a6; }
-.tile-level-9 .tile-inner { color: #32463f; }
+.tile-level-9 { background-color: #f0f0f0; }
+.tile-level-9 .tile-inner { color: #613f73; }
 
-.tile-level-10 { background-color: #74c3a6; }
-.tile-level-10 .tile-inner { color: #32463f; }
+.tile-level-10 { background-color: #000000; }
+.tile-level-10 .tile-inner { color: #f0d20d; }
 
 .tile-level-6 .tile-inner,
 .tile-level-7 .tile-inner,
